@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <ul>
-      <app-event v-for="eventBG in events" :eventInfo="eventBG">
+      <app-event v-for="eventBG in events" :eventInfoProp="eventBG">
 
       </app-event>
     </ul>
