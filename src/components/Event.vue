@@ -4,8 +4,9 @@
             <div>
                 {{ eventInfo.name }}
                 {{ eventInfo.venue.address_1}}
+                {{ eventInfo.venue.city}}
                 {{ eventInfo.link }}
-                {{ eventInfo.description }}
+                <div v-html="eventInfo.description"></div>
             </div>
         </template>
         <template v-else>
