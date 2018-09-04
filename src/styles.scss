@@ -1,0 +1,12 @@
+a{
+    text-decoration: none!important;
+}
+
+.btn-outline-info{
+    transition: all .6s;
+    overflow: hidden;
+    &:hover a{
+        color:white;
+    }
+
+}

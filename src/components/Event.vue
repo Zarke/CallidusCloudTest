@@ -1,16 +1,19 @@
 <template>
-    <div @click="moreInfo = !moreInfo">
+    <div class="btn-outline-info border rounded mb-3 " @click="moreInfo = !moreInfo" >
         <template v-if="moreInfo">
-            <div>
-                {{ eventInfo.name }}
-                {{ eventInfo.venue.address_1}}
-                {{ eventInfo.venue.city}}
-                {{ eventInfo.link }}
-                <div v-html="eventInfo.description"></div>
+            <div >
+                <a class="h1" :href="eventInfo.link">{{ eventInfo.name }}</a>
+                <h5>{{ eventInfo.venue.address_1}}</h5>
+                <h5>{{ eventInfo.venue.city}}</h5>
             </div>
+            <div class="p-3" v-html="eventInfo.description"></div>
         </template>
         <template v-else>
-            {{ eventInfo.name }}
+            <div>
+                <div class="d-inline">{{ eventInfo.name }}</div> 
+                <div class="d-inline"><font-awesome-icon class="float-right mr-2 mt-1" icon="plus" /></div>
+            </div>
+            
         </template>
     </div>
 </template>
