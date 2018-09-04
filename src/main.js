@@ -1,5 +1,10 @@
 import Vue from 'vue'
 import App from './App.vue'
+import VueResource from 'vue-resource';
+
+Vue.use(VueResource);
+Vue.http.options.root = 'https://cors-anywhere.herokuapp.com/https://api.meetup.com/';
+
 
 new Vue({
   el: '#app',
